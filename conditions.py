@@ -64,7 +64,6 @@ def get_min_number():
 
 
 def get_quarter_number():
-    quarter_number = 0
     try:
         x = float(input("Введите координату X: "))
         y = float(input("Введите координату Y: "))
