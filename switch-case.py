@@ -124,7 +124,7 @@ def robot():
     directions = ('С', 'З', 'Ю', 'В')
     current_direction = 'С'
     for _ in range(10):
-        action = input("Введите строку: ")
+        action = input("Введите действие: ")
         match action:
             case "1":
                 current_direction = directions[(directions.index(current_direction) + 1) % 4]
