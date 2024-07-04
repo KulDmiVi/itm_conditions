@@ -120,6 +120,19 @@ def simple_calculate():
                 print(f"{first_operand} / {second_operand} = {first_operand / second_operand}")
 
 
+def robot():
+    directions = ('С', 'З', 'Ю', 'В')
+    current_direction = 'С'
+    for _ in range(10):
+        action = input("Введите строку: ")
+        match action:
+            case "1":
+                current_direction = directions[(directions.index(current_direction) + 1) % 4]
+            case "-1":
+                current_direction = directions[directions.index(current_direction) - 1]
+        print(current_direction)
+
+
 if __name__ == '__main__':
     # get_point_description()
     # get_days_in_month()
@@ -128,4 +141,5 @@ if __name__ == '__main__':
     # get_quarter_number()
     # get_next_day()
     # numbers_to_string()
-    simple_calculate()
+    # simple_calculate()
+    robot()
